@@ -13,3 +13,14 @@ fun View.translateYBy(
         .setStartDelay(startingDelay)
         .setDuration(duration).start()
 }
+
+fun View.scale(
+    alpha: Float = 1f,
+    scaleBy: Float = 1f,
+    duration: Long = 300L,
+    startingDelay: Long = 0
+) {
+    animate().alpha(alpha).scaleX(scaleBy).scaleY(scaleBy)
+        .setStartDelay(startingDelay)
+        .setDuration(duration).start()
+}

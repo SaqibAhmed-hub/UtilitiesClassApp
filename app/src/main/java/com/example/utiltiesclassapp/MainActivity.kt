@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.utiltiesclassapp.utils.scale
 import com.example.utiltiesclassapp.utils.translateYBy
 
 class MainActivity : AppCompatActivity() {
@@ -19,9 +20,9 @@ class MainActivity : AppCompatActivity() {
 
         val txt = findViewById<TextView>(R.id.text1)
         val btn = findViewById<Button>(R.id.btn_click)
-
+        txt.scale(scaleBy = 1f)
         btn.setOnClickListener {
-            txt.translateYBy()
+            txt.scale(scaleBy = 2f)
         }
 
 
