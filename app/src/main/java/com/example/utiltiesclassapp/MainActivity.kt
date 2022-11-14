@@ -1,6 +1,8 @@
 package com.example.utiltiesclassapp
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.view.animation.BounceInterpolator
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -20,9 +22,14 @@ class MainActivity : AppCompatActivity() {
 
         val txt = findViewById<TextView>(R.id.text1)
         val btn = findViewById<Button>(R.id.btn_click)
-        txt.scale(scaleBy = 1f)
+
         btn.setOnClickListener {
-            txt.scale(scaleBy = 2f)
+            //This is a Property Animator
+           ObjectAnimator.ofFloat(txt,"translationY",200f).apply {
+               duration = 1000
+               interpolator = BounceInterpolator()
+               start()
+           }
         }
 
 

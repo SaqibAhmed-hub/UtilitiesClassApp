@@ -17,10 +17,21 @@ object DateTimeUtils {
     TZD  = time zone designator (Z or +hh:mm or -hh:mm)
     */
 
-    private const val dateTime = "2022-11-08T14:02:00.109Z"
+    private const val dateTime = "2021-05-20T14:02:00.109Z"
     private const val DF_DATETIME = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-    private const val DF_24HOUR = "HH:mm"
-    private const val DF_12HOUR = "h:mm a"
+    private const val DF_24HOUR = "HH:mm"  //11:28
+    private const val DF_12HOUR = "h:mm a" //11:28 am
+    private const val DF_DEFAULT_FORMAT_WITHOUT_TIME = "yyyy-MM-dd" // 2021-05-20
+    private const val DF_DATE_TIME_YY_MM_FORMAT = "yyyy-MM-dd'T'HH:mm" // 2021-05-20T11:28
+    private const val DF_DATE_TIME_YY_MM_FULL_TIME_FORMAT = "yyyy-MM-dd'T'HH:mm:ss" // 2021-05-20T11:28
+    private const val DF_DATE_MM_DD_YY_FORMAT = "MM-dd-yyyy" // 05-20-2021
+    private const val DF_DATE_MM_DD_FORMAT = "MMM dd, yyyy" // May 20, 2021
+    private const val DF_DATE_MONTH_OF_YEAR_FORMAT = "d MMMM, yyyy" // 20 May, 2021
+    private const val DF_DAY_OF_WEEK_MONTH_FORMAT = "EEE, d MMM" // Thu, 20 May
+
+
+
+
 
     private val TIME_ZONE = TimeZone.getTimeZone("UTC")
 
